@@ -11,9 +11,6 @@
 		DCFBCE3A2C429F3F00F094F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE392C429F3F00F094F3 /* ContentView.swift */; };
 		DCFBCE3C2C429F4100F094F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFBCE3B2C429F4100F094F3 /* Assets.xcassets */; };
 		DCFBCE3F2C429F4100F094F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFBCE3E2C429F4100F094F3 /* Preview Assets.xcassets */; };
-		DCFBCE492C429F4100F094F3 /* FruitsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE482C429F4100F094F3 /* FruitsTests.swift */; };
-		DCFBCE532C429F4100F094F3 /* FruitsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE522C429F4100F094F3 /* FruitsUITests.swift */; };
-		DCFBCE552C429F4100F094F3 /* FruitsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE542C429F4100F094F3 /* FruitsUITestsLaunchTests.swift */; };
 		DCFBCE632C42A9DD00F094F3 /* FruitsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE622C42A9DD00F094F3 /* FruitsList.swift */; };
 		DCFBCE682C42AA5D00F094F3 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE672C42AA5D00F094F3 /* Fruit.swift */; };
 		DCFBCE6A2C42AEEC00F094F3 /* FruitInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE692C42AEEC00F094F3 /* FruitInfo.swift */; };
@@ -21,21 +18,18 @@
 		DCFBCE6F2C42B73700F094F3 /* FruitsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE6E2C42B73700F094F3 /* FruitsDTO.swift */; };
 		DCFBCE712C42B89E00F094F3 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE702C42B89E00F094F3 /* DataSource.swift */; };
 		DCFBCE742C42BB1100F094F3 /* FruitsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE732C42BB1100F094F3 /* FruitsListViewModel.swift */; };
-		DCFBCE782C42C14D00F094F3 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE702C42B89E00F094F3 /* DataSource.swift */; };
 		DCFBCE792C42C1C900F094F3 /* FruitsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE6E2C42B73700F094F3 /* FruitsDTO.swift */; };
 		DCFBCE7A2C42C25800F094F3 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE672C42AA5D00F094F3 /* Fruit.swift */; };
 		DCFBCE7C2C42C70700F094F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE7B2C42C70700F094F3 /* Constants.swift */; };
+		DCFBCE7F2C42D57A00F094F3 /* FruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE7E2C42D57A00F094F3 /* FruitTests.swift */; };
+		DCFBCE802C42D89B00F094F3 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE702C42B89E00F094F3 /* DataSource.swift */; };
+		DCFBCE822C42D97800F094F3 /* DataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE812C42D97800F094F3 /* DataSourceTests.swift */; };
+		DCFBCE832C42DB0500F094F3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE6C2C42B3B300F094F3 /* NetworkManager.swift */; };
+		DCFBCE842C42DB1200F094F3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE7B2C42C70700F094F3 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DCFBCE452C429F4100F094F3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCFBCE2C2C429F3F00F094F3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = DCFBCE332C429F3F00F094F3;
-			remoteInfo = Fruits;
-		};
-		DCFBCE4F2C429F4100F094F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DCFBCE2C2C429F3F00F094F3 /* Project object */;
 			proxyType = 1;
@@ -51,10 +45,6 @@
 		DCFBCE3B2C429F4100F094F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DCFBCE3E2C429F4100F094F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DCFBCE442C429F4100F094F3 /* FruitsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCFBCE482C429F4100F094F3 /* FruitsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsTests.swift; sourceTree = "<group>"; };
-		DCFBCE4E2C429F4100F094F3 /* FruitsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FruitsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCFBCE522C429F4100F094F3 /* FruitsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsUITests.swift; sourceTree = "<group>"; };
-		DCFBCE542C429F4100F094F3 /* FruitsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DCFBCE622C42A9DD00F094F3 /* FruitsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsList.swift; sourceTree = "<group>"; };
 		DCFBCE672C42AA5D00F094F3 /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		DCFBCE692C42AEEC00F094F3 /* FruitInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitInfo.swift; sourceTree = "<group>"; };
@@ -63,6 +53,8 @@
 		DCFBCE702C42B89E00F094F3 /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		DCFBCE732C42BB1100F094F3 /* FruitsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsListViewModel.swift; sourceTree = "<group>"; };
 		DCFBCE7B2C42C70700F094F3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DCFBCE7E2C42D57A00F094F3 /* FruitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitTests.swift; sourceTree = "<group>"; };
+		DCFBCE812C42D97800F094F3 /* DataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +72,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCFBCE4B2C429F4100F094F3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -95,7 +80,6 @@
 			children = (
 				DCFBCE362C429F3F00F094F3 /* Fruits */,
 				DCFBCE472C429F4100F094F3 /* FruitsTests */,
-				DCFBCE512C429F4100F094F3 /* FruitsUITests */,
 				DCFBCE352C429F3F00F094F3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -105,7 +89,6 @@
 			children = (
 				DCFBCE342C429F3F00F094F3 /* Fruits.app */,
 				DCFBCE442C429F4100F094F3 /* FruitsTests.xctest */,
-				DCFBCE4E2C429F4100F094F3 /* FruitsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,18 +119,9 @@
 		DCFBCE472C429F4100F094F3 /* FruitsTests */ = {
 			isa = PBXGroup;
 			children = (
-				DCFBCE482C429F4100F094F3 /* FruitsTests.swift */,
+				DCFBCE7D2C42D55400F094F3 /* Model */,
 			);
 			path = FruitsTests;
-			sourceTree = "<group>";
-		};
-		DCFBCE512C429F4100F094F3 /* FruitsUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DCFBCE522C429F4100F094F3 /* FruitsUITests.swift */,
-				DCFBCE542C429F4100F094F3 /* FruitsUITestsLaunchTests.swift */,
-			);
-			path = FruitsUITests;
 			sourceTree = "<group>";
 		};
 		DCFBCE612C42A9AB00F094F3 /* View */ = {
@@ -184,6 +158,15 @@
 				DCFBCE732C42BB1100F094F3 /* FruitsListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCFBCE7D2C42D55400F094F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCFBCE812C42D97800F094F3 /* DataSourceTests.swift */,
+				DCFBCE7E2C42D57A00F094F3 /* FruitTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,24 +207,6 @@
 			productReference = DCFBCE442C429F4100F094F3 /* FruitsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DCFBCE4D2C429F4100F094F3 /* FruitsUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = DCFBCE5E2C429F4100F094F3 /* Build configuration list for PBXNativeTarget "FruitsUITests" */;
-			buildPhases = (
-				DCFBCE4A2C429F4100F094F3 /* Sources */,
-				DCFBCE4B2C429F4100F094F3 /* Frameworks */,
-				DCFBCE4C2C429F4100F094F3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				DCFBCE502C429F4100F094F3 /* PBXTargetDependency */,
-			);
-			name = FruitsUITests;
-			productName = FruitsUITests;
-			productReference = DCFBCE4E2C429F4100F094F3 /* FruitsUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -256,10 +221,6 @@
 						CreatedOnToolsVersion = 15.0.1;
 					};
 					DCFBCE432C429F4100F094F3 = {
-						CreatedOnToolsVersion = 15.0.1;
-						TestTargetID = DCFBCE332C429F3F00F094F3;
-					};
-					DCFBCE4D2C429F4100F094F3 = {
 						CreatedOnToolsVersion = 15.0.1;
 						TestTargetID = DCFBCE332C429F3F00F094F3;
 					};
@@ -280,7 +241,6 @@
 			targets = (
 				DCFBCE332C429F3F00F094F3 /* Fruits */,
 				DCFBCE432C429F4100F094F3 /* FruitsTests */,
-				DCFBCE4D2C429F4100F094F3 /* FruitsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,13 +256,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DCFBCE422C429F4100F094F3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCFBCE4C2C429F4100F094F3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,19 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCFBCE832C42DB0500F094F3 /* NetworkManager.swift in Sources */,
+				DCFBCE7F2C42D57A00F094F3 /* FruitTests.swift in Sources */,
 				DCFBCE7A2C42C25800F094F3 /* Fruit.swift in Sources */,
-				DCFBCE782C42C14D00F094F3 /* DataSource.swift in Sources */,
+				DCFBCE822C42D97800F094F3 /* DataSourceTests.swift in Sources */,
+				DCFBCE842C42DB1200F094F3 /* Constants.swift in Sources */,
+				DCFBCE802C42D89B00F094F3 /* DataSource.swift in Sources */,
 				DCFBCE792C42C1C900F094F3 /* FruitsDTO.swift in Sources */,
-				DCFBCE492C429F4100F094F3 /* FruitsTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DCFBCE4A2C429F4100F094F3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCFBCE532C429F4100F094F3 /* FruitsUITests.swift in Sources */,
-				DCFBCE552C429F4100F094F3 /* FruitsUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +303,6 @@
 			isa = PBXTargetDependency;
 			target = DCFBCE332C429F3F00F094F3 /* Fruits */;
 			targetProxy = DCFBCE452C429F4100F094F3 /* PBXContainerItemProxy */;
-		};
-		DCFBCE502C429F4100F094F3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = DCFBCE332C429F3F00F094F3 /* Fruits */;
-			targetProxy = DCFBCE4F2C429F4100F094F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,42 +524,6 @@
 			};
 			name = Release;
 		};
-		DCFBCE5F2C429F4100F094F3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJW25DP288;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Keewee-Apps.FruitsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fruits;
-			};
-			name = Debug;
-		};
-		DCFBCE602C429F4100F094F3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CJW25DP288;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Keewee-Apps.FruitsUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Fruits;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,15 +550,6 @@
 			buildConfigurations = (
 				DCFBCE5C2C429F4100F094F3 /* Debug */,
 				DCFBCE5D2C429F4100F094F3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		DCFBCE5E2C429F4100F094F3 /* Build configuration list for PBXNativeTarget "FruitsUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DCFBCE5F2C429F4100F094F3 /* Debug */,
-				DCFBCE602C429F4100F094F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

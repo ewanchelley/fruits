@@ -7,14 +7,18 @@
 
 import Foundation
 
-class NetworkManager {
+protocol NetworkManaging {
+    func fetchAndDecodeJSON<T: Decodable>(url: URL) async throws -> T
+}
+
+class NetworkManager: NetworkManaging {
     
     enum NetworkError: Error {
         case invalidResponse
         case statusCodeError(Int)
     }
     
-    func getRequest(url: URL) async throws -> Data {
+    private func getRequest(url: URL) async throws -> Data {
         let session = URLSession.shared
         var request = URLRequest(url: url)
         request.httpMethod = "GET"

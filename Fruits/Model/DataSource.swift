@@ -8,9 +8,9 @@
 import Foundation
 
 class DataSource {
-    private let networkManager: NetworkManager
+    private let networkManager: NetworkManaging
     
-    init(networkManager: NetworkManager = NetworkManager()){
+    init(networkManager: NetworkManaging = NetworkManager()){
         self.networkManager = networkManager
     }
     

@@ -21,6 +21,7 @@ extension Fruit {
     }
     
     var formattedWeight: String {
-        return "\(weight) kg"
+        let formattedString = String(format: "%.3f", weight)
+        return "\(formattedString) kg"
     }
 }
