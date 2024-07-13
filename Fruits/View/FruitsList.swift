@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct FruitsList: View {
-    
-    let fruits: [Fruit] = [
-        Fruit(type: "Apple", price: 100, weight: 50),
-        Fruit(type: "Banana", price: 200, weight: 100),
-        Fruit(type: "Cherry", price: 300, weight: 150)
-    ]
+    private var viewModel = FruitsListViewModel()
     
     var body: some View {
         List {
-            ForEach(fruits) { fruit in
+            ForEach(viewModel.fruits) { fruit in
                 NavigationLink(value: fruit) {
-                    Text(fruit.type)
+                    Text(fruit.name)
                         .font(.title3)
                 }
+                
             }
         }
         .navigationTitle("Fruits")
         .navigationDestination(for: Fruit.self) { fruit in
             FruitInfo(fruit: fruit)
+        }
+        .onAppear{
+            Task { await viewModel.fetchFruits() }
         }
     }
 }

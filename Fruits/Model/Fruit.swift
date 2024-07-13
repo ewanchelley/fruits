@@ -9,7 +9,18 @@ import Foundation
 
 struct Fruit: Identifiable, Hashable {
     let id = UUID()
-    let type: String
-    let price: Int
-    let weight: Int
+    let name: String
+    let price: Double
+    let weight: Double
+}
+
+extension Fruit {
+    var formattedPrice: String {
+        let formattedString = String(format: "%.2f", price)
+        return "£\(formattedString)"
+    }
+    
+    var formattedWeight: String {
+        return "\(weight) kg"
+    }
 }

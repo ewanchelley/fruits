@@ -12,15 +12,15 @@ struct FruitInfo: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Price: \(fruit.price)")
-            Text("Weight: \(fruit.weight)")
+            Text("Price: \(fruit.formattedPrice)")
+            Text("Weight: \(fruit.formattedWeight)")
             Spacer()
         }
         .font(.title2)
-        .navigationTitle(fruit.type)
+        .navigationTitle(fruit.name)
     }
 }
 
 #Preview {
-    FruitInfo(fruit: Fruit(type: "Apple", price: 100, weight: 50))
+    FruitInfo(fruit: Fruit(name: "Apple", price: 1.00, weight: 50))
 }
