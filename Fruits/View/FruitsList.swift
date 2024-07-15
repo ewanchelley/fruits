@@ -34,10 +34,12 @@ struct FruitsList: View {
             FruitInfo(fruit: fruit)
         }
         .onAppear {
-            Task { await viewModel.fetchFruits() }
+            if viewModel.fruits.isEmpty {
+                Task { await viewModel.fetchFruits() }
+            }
         }
         .refreshable {
-            Task { await viewModel.fetchFruits() }
+            await viewModel.fetchFruits()
         }
     }
 }
