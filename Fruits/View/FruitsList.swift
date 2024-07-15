@@ -36,6 +36,9 @@ struct FruitsList: View {
         .onAppear {
             Task { await viewModel.fetchFruits() }
         }
+        .refreshable {
+            Task { await viewModel.fetchFruits() }
+        }
     }
 }
 
