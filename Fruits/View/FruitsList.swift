@@ -16,15 +16,24 @@ struct FruitsList: View {
                 NavigationLink(value: fruit) {
                     Text(fruit.name)
                         .font(.title3)
+                        .foregroundStyle(.black)
+                        .padding(8)
                 }
-                
+                .listRowSeparator(.hidden)
+                .listRowBackground (
+                    RoundedRectangle(cornerRadius: UIConstants.contentBackgroundCornerRadius)
+                        .fill(UIConstants.contentBackgroundColor)
+                        .padding(3)
+                )
             }
         }
+        .scrollContentBackground(.hidden)
+        .background(FruitsBackground())
         .navigationTitle("Fruits")
         .navigationDestination(for: Fruit.self) { fruit in
             FruitInfo(fruit: fruit)
         }
-        .onAppear{
+        .onAppear {
             Task { await viewModel.fetchFruits() }
         }
     }
