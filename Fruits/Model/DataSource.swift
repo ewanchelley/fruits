@@ -20,6 +20,7 @@ class DataSource {
         let fruitsDTO: FruitsDTO
         do {
             fruitsDTO = try await networkManager.fetchAndDecodeJSON(url: url)
+            print("Fruits fetched successfully!")
         } catch {
             print("Failed to fetch fruits: \(error.localizedDescription)")
             return nil

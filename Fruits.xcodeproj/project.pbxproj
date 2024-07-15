@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCDEB0882C45965000ABD6C9 /* UsageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0872C45965000ABD6C9 /* UsageStats.swift */; };
+		DCDEB08A2C45987500ABD6C9 /* UsageStatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0892C45987500ABD6C9 /* UsageStatsTests.swift */; };
+		DCDEB08B2C45AAD200ABD6C9 /* UsageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0872C45965000ABD6C9 /* UsageStats.swift */; };
+		DCDEB08D2C45AAF200ABD6C9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */; };
+		DCDEB08F2C45B27800ABD6C9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */; };
 		DCFBCE382C429F3F00F094F3 /* FruitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE372C429F3F00F094F3 /* FruitsApp.swift */; };
 		DCFBCE3A2C429F3F00F094F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE392C429F3F00F094F3 /* ContentView.swift */; };
 		DCFBCE3C2C429F4100F094F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFBCE3B2C429F4100F094F3 /* Assets.xcassets */; };
@@ -41,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DCDEB0872C45965000ABD6C9 /* UsageStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStats.swift; sourceTree = "<group>"; };
+		DCDEB0892C45987500ABD6C9 /* UsageStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsTests.swift; sourceTree = "<group>"; };
+		DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		DCFBCE342C429F3F00F094F3 /* Fruits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFBCE372C429F3F00F094F3 /* FruitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsApp.swift; sourceTree = "<group>"; };
 		DCFBCE392C429F3F00F094F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +87,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DCDEB08E2C45B03700ABD6C9 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		DCFBCE2B2C429F3F00F094F3 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +115,7 @@
 		DCFBCE362C429F3F00F094F3 /* Fruits */ = {
 			isa = PBXGroup;
 			children = (
+				DCDEB08E2C45B03700ABD6C9 /* Utility */,
 				DCFBCE6B2C42B29200F094F3 /* Network */,
 				DCFBCE662C42AA4F00F094F3 /* Model */,
 				DCFBCE722C42BAEF00F094F3 /* ViewModel */,
@@ -154,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				DCFBCE6C2C42B3B300F094F3 /* NetworkManager.swift */,
+				DCDEB0872C45965000ABD6C9 /* UsageStats.swift */,
+				DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -170,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				DCFBCE812C42D97800F094F3 /* DataSourceTests.swift */,
+				DCDEB0892C45987500ABD6C9 /* UsageStatsTests.swift */,
 				DCFBCE7E2C42D57A00F094F3 /* FruitTests.swift */,
 			);
 			path = Model;
@@ -276,7 +295,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCFBCE742C42BB1100F094F3 /* FruitsListViewModel.swift in Sources */,
+				DCDEB08D2C45AAF200ABD6C9 /* NetworkError.swift in Sources */,
 				DCFBCE6D2C42B3B300F094F3 /* NetworkManager.swift in Sources */,
+				DCDEB0882C45965000ABD6C9 /* UsageStats.swift in Sources */,
 				DCFBCE682C42AA5D00F094F3 /* Fruit.swift in Sources */,
 				DCFBCE6F2C42B73700F094F3 /* FruitsDTO.swift in Sources */,
 				DCFBCE632C42A9DD00F094F3 /* FruitsList.swift in Sources */,
@@ -298,9 +319,12 @@
 				DCFBCE7F2C42D57A00F094F3 /* FruitTests.swift in Sources */,
 				DCFBCE7A2C42C25800F094F3 /* Fruit.swift in Sources */,
 				DCFBCE822C42D97800F094F3 /* DataSourceTests.swift in Sources */,
+				DCDEB08B2C45AAD200ABD6C9 /* UsageStats.swift in Sources */,
 				DCFBCE842C42DB1200F094F3 /* Constants.swift in Sources */,
 				DCFBCE802C42D89B00F094F3 /* DataSource.swift in Sources */,
 				DCFBCE792C42C1C900F094F3 /* FruitsDTO.swift in Sources */,
+				DCDEB08A2C45987500ABD6C9 /* UsageStatsTests.swift in Sources */,
+				DCDEB08F2C45B27800ABD6C9 /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
