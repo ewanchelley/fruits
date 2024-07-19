@@ -10,9 +10,18 @@ import Observation
 
 @Observable
 class FruitsListViewModel {
-    private let dataSource = DataSource()
+    private let errorHandler: ErrorHandler
+    private let networkManager: NetworkManaging
+    private let dataSource: DataSource
+    
     private(set) var fruits: [Fruit] = []
     
+    init() {
+        self.errorHandler = ErrorHandler()
+        self.networkManager = NetworkManager()
+        self.dataSource = DataSource(networkManager: networkManager, errorHandler: errorHandler)
+    }
+
     func fetchFruits() async {
         if let fetchedFruits = await dataSource.fetchFruits() {
             fruits = fetchedFruits

@@ -11,7 +11,7 @@ final class DataSourceTests: XCTestCase {
     
     func testFetchFruitsSuccessful() async throws {
         let successfulNetworkManager = MockNetworkManager(successful: true)
-        let dataSource = DataSource(networkManager: successfulNetworkManager)
+        let dataSource = DataSource(networkManager: successfulNetworkManager, errorHandler: getMockErrorHandler())
         let fruits = await dataSource.fetchFruits()
         
         XCTAssertEqual("Apple", fruits![0].name)
@@ -21,10 +21,15 @@ final class DataSourceTests: XCTestCase {
     
     func testFetchFruitsUnsuccessful() async throws {
         let unsuccessfulNetworkManager = MockNetworkManager(successful: false)
-        let dataSource = DataSource(networkManager: unsuccessfulNetworkManager)
+        let dataSource = DataSource(networkManager: unsuccessfulNetworkManager, errorHandler: getMockErrorHandler())
         let fruits = await dataSource.fetchFruits()
+        sleep(1)
         
         XCTAssertNil(fruits)
+        
+        // Usage stats should be sent for unsuccessful fetching
+        XCTAssertEqual(UsageStatsEvent.error, MockUsageStats.lastEvent)
+        XCTAssertEqual("Unknown error: Fetching was not successful", MockUsageStats.lastData)
     }
     
     func testToFruits() throws {
@@ -46,27 +51,4 @@ final class DataSourceTests: XCTestCase {
         XCTAssertEqual(0.210, fruits[2].weight)
     }
 
-    class MockNetworkManager: NetworkManaging {
-        let successful: Bool
-        
-        init(successful: Bool) {
-            self.successful = successful
-        }
-        
-        enum NetworkError: Error {
-            case invalidResponse
-        }
-        
-        func fetchAndDecodeJSON<T>(url: URL) async throws -> T where T : Decodable {
-            if !successful {
-                throw NetworkError.invalidResponse
-            }
-            
-            let mockFruitsDTO = FruitsDTO(fruit: [
-                FruitDTO(type: "apple", price: 150, weight: 200)
-            ])
-            return mockFruitsDTO as! T
-        }
-    }
-    
 }

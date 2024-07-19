@@ -41,6 +41,7 @@ class UsageStatsManager: UsageStats {
             }
             
         } catch {
+            // Don't send this usage stats for this error or could enter an infinite loop
             print("Failed to send usage statistics: \(error.localizedDescription)")
         }
     }

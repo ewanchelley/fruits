@@ -7,16 +7,16 @@
 
 import Foundation
 
-enum NetworkError: Error, LocalizedError {
+enum NetworkError: AppError {
     case invalidResponse
     case statusCodeError(Int)
     
     var errorDescription: String? {
         switch self {
         case .invalidResponse:
-            return "Invalid response received."
+            return "Invalid response received"
         case .statusCodeError(let statusCode):
-            return "Unexpected status code (\(statusCode))."
+            return "Unexpected status code: \(statusCode)"
         }
     }
 }

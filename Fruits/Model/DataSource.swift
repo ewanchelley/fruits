@@ -9,9 +9,11 @@ import Foundation
 
 class DataSource {
     private let networkManager: NetworkManaging
+    private let errorHandler: ErrorHandler
     
-    init(networkManager: NetworkManaging = NetworkManager()){
+    init(networkManager: NetworkManaging, errorHandler: ErrorHandler){
         self.networkManager = networkManager
+        self.errorHandler = errorHandler
     }
     
     func fetchFruits() async -> [Fruit]? {
@@ -22,7 +24,7 @@ class DataSource {
             fruitsDTO = try await networkManager.fetchAndDecodeJSON(url: url)
             print("Fruits fetched successfully!")
         } catch {
-            print("Failed to fetch fruits: \(error.localizedDescription)")
+            errorHandler.handleError(error)
             return nil
         }
         return fruitsDTO.toFruits()

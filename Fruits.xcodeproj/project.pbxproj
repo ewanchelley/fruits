@@ -12,6 +12,14 @@
 		DCDEB08B2C45AAD200ABD6C9 /* UsageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0872C45965000ABD6C9 /* UsageStats.swift */; };
 		DCDEB08D2C45AAF200ABD6C9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */; };
 		DCDEB08F2C45B27800ABD6C9 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */; };
+		DCDEB0972C4AFFFD00ABD6C9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0962C4AFFFD00ABD6C9 /* AppError.swift */; };
+		DCDEB0992C4B001100ABD6C9 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0982C4B001100ABD6C9 /* ErrorHandler.swift */; };
+		DCDEB09C2C4B068800ABD6C9 /* ErrorHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB09B2C4B068800ABD6C9 /* ErrorHandlerTests.swift */; };
+		DCDEB09D2C4B06D000ABD6C9 /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0982C4B001100ABD6C9 /* ErrorHandler.swift */; };
+		DCDEB09E2C4B086600ABD6C9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0962C4AFFFD00ABD6C9 /* AppError.swift */; };
+		DCDEB0A12C4B099800ABD6C9 /* MockUsageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A02C4B099800ABD6C9 /* MockUsageStats.swift */; };
+		DCDEB0A32C4B09DB00ABD6C9 /* MockErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A22C4B09DB00ABD6C9 /* MockErrorHandler.swift */; };
+		DCDEB0A52C4B0A2100ABD6C9 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A42C4B0A2100ABD6C9 /* MockNetworkManager.swift */; };
 		DCFBCE382C429F3F00F094F3 /* FruitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE372C429F3F00F094F3 /* FruitsApp.swift */; };
 		DCFBCE3A2C429F3F00F094F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE392C429F3F00F094F3 /* ContentView.swift */; };
 		DCFBCE3C2C429F4100F094F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFBCE3B2C429F4100F094F3 /* Assets.xcassets */; };
@@ -49,6 +57,12 @@
 		DCDEB0872C45965000ABD6C9 /* UsageStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStats.swift; sourceTree = "<group>"; };
 		DCDEB0892C45987500ABD6C9 /* UsageStatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStatsTests.swift; sourceTree = "<group>"; };
 		DCDEB08C2C45AAF200ABD6C9 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		DCDEB0962C4AFFFD00ABD6C9 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		DCDEB0982C4B001100ABD6C9 /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		DCDEB09B2C4B068800ABD6C9 /* ErrorHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandlerTests.swift; sourceTree = "<group>"; };
+		DCDEB0A02C4B099800ABD6C9 /* MockUsageStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsageStats.swift; sourceTree = "<group>"; };
+		DCDEB0A22C4B09DB00ABD6C9 /* MockErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockErrorHandler.swift; sourceTree = "<group>"; };
+		DCDEB0A42C4B0A2100ABD6C9 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		DCFBCE342C429F3F00F094F3 /* Fruits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFBCE372C429F3F00F094F3 /* FruitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsApp.swift; sourceTree = "<group>"; };
 		DCFBCE392C429F3F00F094F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,11 +101,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DCDEB08E2C45B03700ABD6C9 /* Utility */ = {
+		DCDEB08E2C45B03700ABD6C9 /* ErrorHandling */ = {
 			isa = PBXGroup;
 			children = (
+				DCDEB0962C4AFFFD00ABD6C9 /* AppError.swift */,
+				DCDEB0982C4B001100ABD6C9 /* ErrorHandler.swift */,
 			);
-			path = Utility;
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		DCDEB0952C4AFD4200ABD6C9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEB0892C45987500ABD6C9 /* UsageStatsTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DCDEB09A2C4B066A00ABD6C9 /* ErrorHandling */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEB09B2C4B068800ABD6C9 /* ErrorHandlerTests.swift */,
+			);
+			path = ErrorHandling;
+			sourceTree = "<group>";
+		};
+		DCDEB09F2C4B097800ABD6C9 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEB0A02C4B099800ABD6C9 /* MockUsageStats.swift */,
+				DCDEB0A22C4B09DB00ABD6C9 /* MockErrorHandler.swift */,
+				DCDEB0A42C4B0A2100ABD6C9 /* MockNetworkManager.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		DCFBCE2B2C429F3F00F094F3 = {
@@ -115,7 +157,7 @@
 		DCFBCE362C429F3F00F094F3 /* Fruits */ = {
 			isa = PBXGroup;
 			children = (
-				DCDEB08E2C45B03700ABD6C9 /* Utility */,
+				DCDEB08E2C45B03700ABD6C9 /* ErrorHandling */,
 				DCFBCE6B2C42B29200F094F3 /* Network */,
 				DCFBCE662C42AA4F00F094F3 /* Model */,
 				DCFBCE722C42BAEF00F094F3 /* ViewModel */,
@@ -138,7 +180,10 @@
 		DCFBCE472C429F4100F094F3 /* FruitsTests */ = {
 			isa = PBXGroup;
 			children = (
+				DCDEB09A2C4B066A00ABD6C9 /* ErrorHandling */,
+				DCDEB0952C4AFD4200ABD6C9 /* Network */,
 				DCFBCE7D2C42D55400F094F3 /* Model */,
+				DCDEB09F2C4B097800ABD6C9 /* Mocks */,
 			);
 			path = FruitsTests;
 			sourceTree = "<group>";
@@ -188,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				DCFBCE812C42D97800F094F3 /* DataSourceTests.swift */,
-				DCDEB0892C45987500ABD6C9 /* UsageStatsTests.swift */,
 				DCFBCE7E2C42D57A00F094F3 /* FruitTests.swift */,
 			);
 			path = Model;
@@ -298,7 +342,9 @@
 				DCDEB08D2C45AAF200ABD6C9 /* NetworkError.swift in Sources */,
 				DCFBCE6D2C42B3B300F094F3 /* NetworkManager.swift in Sources */,
 				DCDEB0882C45965000ABD6C9 /* UsageStats.swift in Sources */,
+				DCDEB0972C4AFFFD00ABD6C9 /* AppError.swift in Sources */,
 				DCFBCE682C42AA5D00F094F3 /* Fruit.swift in Sources */,
+				DCDEB0992C4B001100ABD6C9 /* ErrorHandler.swift in Sources */,
 				DCFBCE6F2C42B73700F094F3 /* FruitsDTO.swift in Sources */,
 				DCFBCE632C42A9DD00F094F3 /* FruitsList.swift in Sources */,
 				DCFBCE7C2C42C70700F094F3 /* Constants.swift in Sources */,
@@ -315,14 +361,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDEB09C2C4B068800ABD6C9 /* ErrorHandlerTests.swift in Sources */,
 				DCFBCE832C42DB0500F094F3 /* NetworkManager.swift in Sources */,
+				DCDEB0A52C4B0A2100ABD6C9 /* MockNetworkManager.swift in Sources */,
 				DCFBCE7F2C42D57A00F094F3 /* FruitTests.swift in Sources */,
 				DCFBCE7A2C42C25800F094F3 /* Fruit.swift in Sources */,
+				DCDEB09E2C4B086600ABD6C9 /* AppError.swift in Sources */,
 				DCFBCE822C42D97800F094F3 /* DataSourceTests.swift in Sources */,
 				DCDEB08B2C45AAD200ABD6C9 /* UsageStats.swift in Sources */,
 				DCFBCE842C42DB1200F094F3 /* Constants.swift in Sources */,
 				DCFBCE802C42D89B00F094F3 /* DataSource.swift in Sources */,
+				DCDEB0A32C4B09DB00ABD6C9 /* MockErrorHandler.swift in Sources */,
+				DCDEB0A12C4B099800ABD6C9 /* MockUsageStats.swift in Sources */,
 				DCFBCE792C42C1C900F094F3 /* FruitsDTO.swift in Sources */,
+				DCDEB09D2C4B06D000ABD6C9 /* ErrorHandler.swift in Sources */,
 				DCDEB08A2C45987500ABD6C9 /* UsageStatsTests.swift in Sources */,
 				DCDEB08F2C45B27800ABD6C9 /* NetworkError.swift in Sources */,
 			);
