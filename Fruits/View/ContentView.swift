@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var navigation = NavigationViewModel()
+    private var fruitsListViewModel = FruitsListViewModel()
+    
     var body: some View {
-        NavigationStack {
-            FruitsList()
+        NavigationStack(path: $navigation.path) {
+            FruitsList(viewModel: fruitsListViewModel)
         }
+        .environmentObject(navigation)
     }
 }
 

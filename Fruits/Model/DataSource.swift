@@ -24,7 +24,7 @@ class DataSource {
             fruitsDTO = try await networkManager.fetchAndDecodeJSON(url: url)
             print("Fruits fetched successfully!")
         } catch {
-            errorHandler.handleError(error)
+            await errorHandler.handleError(error)
             return nil
         }
         return fruitsDTO.toFruits()

@@ -14,10 +14,8 @@ class ErrorHandler {
         self.usageStats = usageStats
     }
     
-    func handleError(_ error: Error) {
+    func handleError(_ error: Error) async {
         let appError = (error as? AppError) ?? UnknownError.unknown("Unknown error: \(error.localizedDescription)")
-        Task {
-            await usageStats.sendUsageStats(event: .error, data: appError.localizedDescription)
-        }
+        await usageStats.sendUsageStats(event: .error, data: appError.localizedDescription)
     }
 }

@@ -8,22 +8,15 @@
 import SwiftUI
 
 struct FruitsList: View {
-    private var viewModel = FruitsListViewModel()
+    @EnvironmentObject var navigation: NavigationViewModel
+    let viewModel: FruitsListViewModel
     
     var body: some View {
         List {
             ForEach(viewModel.fruits) { fruit in
-                NavigationLink(value: fruit) {
-                    Text(fruit.name)
-                        .font(.title3)
-                        .foregroundStyle(.black)
-                        .padding(8)
-                }
-                .listRowSeparator(.hidden)
-                .listRowBackground (
-                    RoundedRectangle(cornerRadius: UIConstants.contentBackgroundCornerRadius)
-                        .fill(UIConstants.contentBackgroundColor)
-                        .padding(3)
+                FruitNameButton(
+                    fruitName: fruit.name,
+                    onPressButton: { navigation.navigateTo(fruit) }
                 )
             }
         }
@@ -34,6 +27,9 @@ struct FruitsList: View {
             FruitInfo(fruit: fruit)
         }
         .onAppear {
+            Task {
+                await navigation.viewLoaded()
+            }
             if viewModel.fruits.isEmpty {
                 Task { await viewModel.fetchFruits() }
             }
@@ -45,5 +41,6 @@ struct FruitsList: View {
 }
 
 #Preview {
-    FruitsList()
+    FruitsList(viewModel: FruitsListViewModel())
+        .environmentObject(NavigationViewModel())
 }

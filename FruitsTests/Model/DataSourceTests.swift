@@ -23,7 +23,6 @@ final class DataSourceTests: XCTestCase {
         let unsuccessfulNetworkManager = MockNetworkManager(successful: false)
         let dataSource = DataSource(networkManager: unsuccessfulNetworkManager, errorHandler: getMockErrorHandler())
         let fruits = await dataSource.fetchFruits()
-        sleep(1)
         
         XCTAssertNil(fruits)
         

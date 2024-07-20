@@ -16,34 +16,31 @@ final class ErrorHandlerTests: XCTestCase {
         MockUsageStats.reset()
     }
     
-    func testErrorHandlerNetworkErrorInvalidResponse() throws {
+    func testErrorHandlerNetworkErrorInvalidResponse() async throws {
         let errorHandler = ErrorHandler(usageStats: MockUsageStats.self)
         let error = NetworkError.invalidResponse
         
-        errorHandler.handleError(error)
-        sleep(1)
+        await errorHandler.handleError(error)
         
         XCTAssertEqual(UsageStatsEvent.error, MockUsageStats.lastEvent)
         XCTAssertEqual("Invalid response received", MockUsageStats.lastData)
     }
     
-    func testErrorHandlerNetworkErrorStatusCode() throws {
+    func testErrorHandlerNetworkErrorStatusCode() async throws {
         let errorHandler = ErrorHandler(usageStats: MockUsageStats.self)
         let error = NetworkError.statusCodeError(404)
         
-        errorHandler.handleError(error)
-        sleep(1)
+        await errorHandler.handleError(error)
         
         XCTAssertEqual(UsageStatsEvent.error, MockUsageStats.lastEvent)
         XCTAssertEqual("Unexpected status code: 404", MockUsageStats.lastData)
     }
     
-    func testUnexpectedError() throws {
+    func testUnexpectedError() async throws {
         let errorHandler = ErrorHandler(usageStats: MockUsageStats.self)
         let error = MockUnknownError.unknown("This is unexpected")
         
-        errorHandler.handleError(error)
-        sleep(1)
+        await errorHandler.handleError(error)
         
         XCTAssertEqual(UsageStatsEvent.error, MockUsageStats.lastEvent)
         XCTAssertEqual("Unknown error: This is unexpected", MockUsageStats.lastData)

@@ -20,6 +20,10 @@
 		DCDEB0A12C4B099800ABD6C9 /* MockUsageStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A02C4B099800ABD6C9 /* MockUsageStats.swift */; };
 		DCDEB0A32C4B09DB00ABD6C9 /* MockErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A22C4B09DB00ABD6C9 /* MockErrorHandler.swift */; };
 		DCDEB0A52C4B0A2100ABD6C9 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A42C4B0A2100ABD6C9 /* MockNetworkManager.swift */; };
+		DCDEB0A92C4C4BD000ABD6C9 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A82C4C4BD000ABD6C9 /* NavigationViewModel.swift */; };
+		DCDEB0AB2C4C55DE00ABD6C9 /* FruitNameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0AA2C4C55DE00ABD6C9 /* FruitNameButton.swift */; };
+		DCDEB0B02C4C58A400ABD6C9 /* NavigationViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0AF2C4C58A400ABD6C9 /* NavigationViewModelTests.swift */; };
+		DCDEB0B12C4C58DF00ABD6C9 /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDEB0A82C4C4BD000ABD6C9 /* NavigationViewModel.swift */; };
 		DCFBCE382C429F3F00F094F3 /* FruitsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE372C429F3F00F094F3 /* FruitsApp.swift */; };
 		DCFBCE3A2C429F3F00F094F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFBCE392C429F3F00F094F3 /* ContentView.swift */; };
 		DCFBCE3C2C429F4100F094F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCFBCE3B2C429F4100F094F3 /* Assets.xcassets */; };
@@ -63,6 +67,9 @@
 		DCDEB0A02C4B099800ABD6C9 /* MockUsageStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUsageStats.swift; sourceTree = "<group>"; };
 		DCDEB0A22C4B09DB00ABD6C9 /* MockErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockErrorHandler.swift; sourceTree = "<group>"; };
 		DCDEB0A42C4B0A2100ABD6C9 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		DCDEB0A82C4C4BD000ABD6C9 /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
+		DCDEB0AA2C4C55DE00ABD6C9 /* FruitNameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitNameButton.swift; sourceTree = "<group>"; };
+		DCDEB0AF2C4C58A400ABD6C9 /* NavigationViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModelTests.swift; sourceTree = "<group>"; };
 		DCFBCE342C429F3F00F094F3 /* Fruits.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruits.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCFBCE372C429F3F00F094F3 /* FruitsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitsApp.swift; sourceTree = "<group>"; };
 		DCFBCE392C429F3F00F094F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -136,6 +143,33 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		DCDEB0AC2C4C55F000ABD6C9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				DCFBCE622C42A9DD00F094F3 /* FruitsList.swift */,
+				DCFBCE692C42AEEC00F094F3 /* FruitInfo.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		DCDEB0AD2C4C55F700ABD6C9 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DCFBCE892C45637600F094F3 /* FruitInfoRow.swift */,
+				DCFBCE8B2C45673900F094F3 /* FruitsBackground.swift */,
+				DCDEB0AA2C4C55DE00ABD6C9 /* FruitNameButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DCDEB0AE2C4C587800ABD6C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DCDEB0AF2C4C58A400ABD6C9 /* NavigationViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DCFBCE2B2C429F3F00F094F3 = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +217,7 @@
 				DCDEB09A2C4B066A00ABD6C9 /* ErrorHandling */,
 				DCDEB0952C4AFD4200ABD6C9 /* Network */,
 				DCFBCE7D2C42D55400F094F3 /* Model */,
+				DCDEB0AE2C4C587800ABD6C9 /* ViewModel */,
 				DCDEB09F2C4B097800ABD6C9 /* Mocks */,
 			);
 			path = FruitsTests;
@@ -192,10 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				DCFBCE392C429F3F00F094F3 /* ContentView.swift */,
-				DCFBCE622C42A9DD00F094F3 /* FruitsList.swift */,
-				DCFBCE692C42AEEC00F094F3 /* FruitInfo.swift */,
-				DCFBCE892C45637600F094F3 /* FruitInfoRow.swift */,
-				DCFBCE8B2C45673900F094F3 /* FruitsBackground.swift */,
+				DCDEB0AC2C4C55F000ABD6C9 /* Screens */,
+				DCDEB0AD2C4C55F700ABD6C9 /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				DCFBCE732C42BB1100F094F3 /* FruitsListViewModel.swift */,
+				DCDEB0A82C4C4BD000ABD6C9 /* NavigationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -338,10 +372,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDEB0A92C4C4BD000ABD6C9 /* NavigationViewModel.swift in Sources */,
 				DCFBCE742C42BB1100F094F3 /* FruitsListViewModel.swift in Sources */,
 				DCDEB08D2C45AAF200ABD6C9 /* NetworkError.swift in Sources */,
 				DCFBCE6D2C42B3B300F094F3 /* NetworkManager.swift in Sources */,
 				DCDEB0882C45965000ABD6C9 /* UsageStats.swift in Sources */,
+				DCDEB0AB2C4C55DE00ABD6C9 /* FruitNameButton.swift in Sources */,
 				DCDEB0972C4AFFFD00ABD6C9 /* AppError.swift in Sources */,
 				DCFBCE682C42AA5D00F094F3 /* Fruit.swift in Sources */,
 				DCDEB0992C4B001100ABD6C9 /* ErrorHandler.swift in Sources */,
@@ -361,6 +397,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCDEB0B12C4C58DF00ABD6C9 /* NavigationViewModel.swift in Sources */,
 				DCDEB09C2C4B068800ABD6C9 /* ErrorHandlerTests.swift in Sources */,
 				DCFBCE832C42DB0500F094F3 /* NetworkManager.swift in Sources */,
 				DCDEB0A52C4B0A2100ABD6C9 /* MockNetworkManager.swift in Sources */,
@@ -370,6 +407,7 @@
 				DCFBCE822C42D97800F094F3 /* DataSourceTests.swift in Sources */,
 				DCDEB08B2C45AAD200ABD6C9 /* UsageStats.swift in Sources */,
 				DCFBCE842C42DB1200F094F3 /* Constants.swift in Sources */,
+				DCDEB0B02C4C58A400ABD6C9 /* NavigationViewModelTests.swift in Sources */,
 				DCFBCE802C42D89B00F094F3 /* DataSource.swift in Sources */,
 				DCDEB0A32C4B09DB00ABD6C9 /* MockErrorHandler.swift in Sources */,
 				DCDEB0A12C4B099800ABD6C9 /* MockUsageStats.swift in Sources */,

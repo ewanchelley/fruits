@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FruitInfo: View {
+    @EnvironmentObject var navigation: NavigationViewModel
     let fruit: Fruit
     
     var body: some View {
@@ -40,9 +41,29 @@ struct FruitInfo: View {
             Spacer()
         }
         .background(FruitsBackground())
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    navigation.navigateBack()
+                } label: {
+                    HStack {
+                        Image(systemName: "chevron.backward")
+                        Text("Fruits")
+                    }
+                    .fontWeight(.medium)
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                await navigation.viewLoaded()
+            }
+        }
     }
 }
 
 #Preview {
     FruitInfo(fruit: Fruit(name: "Apple", price: 1.00, weight: 0.3))
+        .environmentObject(NavigationViewModel())
 }
