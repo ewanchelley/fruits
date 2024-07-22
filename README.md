@@ -8,12 +8,12 @@ This app was developed for iOS using SwiftUI, and displays a list of fruits.
 - Pull down to refresh (reload fruits from the server).
 - Tapping on a certain fruit will load the Fruit Info screen for that fruit.
 
+![image](https://github.com/user-attachments/assets/babc744e-db96-468f-9328-2f6c9a343a7e)
 
 ## Fruit Info Screen
 
 - Displays the price (in £) and the weight (in kg) of the selected fruit.
 
-![image](https://github.com/user-attachments/assets/babc744e-db96-468f-9328-2f6c9a343a7e)
 ![image](https://github.com/user-attachments/assets/24ef62ca-a9d2-47b8-bc36-7c0b8208509d)
 
 
